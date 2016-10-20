@@ -28,14 +28,18 @@ Now let's install pip. Simply run
 sudo python get-pip.py
 ```
 Now you've installed pip!
-
+##Step 2: Enter your Virtual Environment and Install Requirements
+First, enter:
+```
+source venv/bin/activate
+```
 Then, execute: 
 ```
 pip install requirements.txt
 ```
 You will install Django version 1.9.2 and virtulenv 1.11.4
 
-##Step 2: Boom, Workshop Done!
+##Step 3: Boom, Workshop Done!
 Try this: 
 ```
 python manage.py runserver
@@ -45,4 +49,4 @@ Check it out! Your server is working.
 
 Your app works - k bai! 
 
-##Step 3: Jk, jk - let's get to it 
+##Step 4: Jk, jk - let's get to it 
