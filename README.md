@@ -86,4 +86,4 @@ urlpatterns = [
 ```
 What this does is map the url matching regex '^$' (which would be localhost:8000 without anything after) to the method named 'index' in our views file. 
 
-Go ahead and run your server again, and go to [http://localhost:8000/polls/] - you should see your message. 
+Go ahead and run your server again, and go to [http://localhost:8000/polls/](http://localhost:8000/polls/) - you should see your message. 
