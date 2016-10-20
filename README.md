@@ -35,7 +35,7 @@ source venv/bin/activate
 ```
 Then, execute: 
 ```
-pip install -r requirements.txt
+pip install -r --user requirements.txt
 ```
 You will install Django version 1.9.2 and virtulenv 1.11.4
 
