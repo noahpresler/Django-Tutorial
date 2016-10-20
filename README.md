@@ -1,5 +1,7 @@
 # Django-Tutorial
 
+Follow along with the slides here: ________________
+
 ##Step 0: Clone the Repository
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Once you have it, clone this repo with the following command: 
