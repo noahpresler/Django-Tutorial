@@ -87,3 +87,15 @@ urlpatterns = [
 What this does is map the url matching regex '^$' (which would be localhost:8000 without anything after) to the method named 'index' in our views file. 
 
 Go ahead and run your server again, and go to [http://localhost:8000/polls/](http://localhost:8000/polls/) - you should see your message. 
+
+##Step 5: Database & Models
+Remember models? That way we represent objects, relationships and store them to the Database? 
+Well, before we write one we are going to need to talk about the Database. 
+
+You have many choices of databases, The Semester.ly team uses PostgreSQL. You can easily switch, but for simplicity, we are going to use SQLite. SQLite is included in Python, so you won’t need to install anything else to support your database.
+
+Let's get started by executing the following command:
+```bash
+$ python manage.py migrate
+```
+We will run this any time we add or edit a model. This command automatically creates a SQL migration that tells your database how to add/remove/edit the tables used to store your objects/relationships. This is pretty magical, you don't need to write any SQL - Django will automatically transform your python into a database :)
