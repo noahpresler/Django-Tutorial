@@ -22,3 +22,7 @@ Django==1.9.2
 virtualenv==1.11.4
 ```
 by executing: 
+```
+pip install requirements.txt
+```
+You will install Django version 1.9.2 and virtulenv 1.11.4
