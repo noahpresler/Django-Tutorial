@@ -50,3 +50,16 @@ Check it out! Your server is working.
 Your app works - k bai! 
 
 ##Step 4: Jk, jk - let's get to it 
+
+Now, you'll see in your directory the following: 
+```
+Django-Tutorial/
+├── db.sqlite3
+├── djangoworkshop
+├── get-pip.py
+├── manage.py
+├── README.md
+├── requirements.txt
+└── venv
+```
+This is because we've setup your app directory for you. In the future you can execute 'python manage.py startapp name_of_your_app' to do this. 
