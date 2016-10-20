@@ -7,11 +7,7 @@ We are going to build a Poll for people to vote on the project to win Semester.l
 
 ##Step 0: Clone the Repository
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-Once you have it, clone this repo with the following command: 
-
-```
-$ git clone https://github.com/noahpresler/Django-Tutorial.git
-```
+Once you have it, click the Fork button above to make your own version of this repo! 
 
 ##Step 1: Install Python/Pip
 
@@ -100,7 +96,7 @@ Let's get started by executing the following command:
 ```bash
 $ python manage.py migrate
 ```
-We will run this any time we add or edit a model. This command automatically creates a SQL migration that tells your database how to add/remove/edit the tables used to store your objects/relationships. This is pretty magical, you don't need to write any SQL - Django will automatically transform your python into a database :). We don't have any tables yet, so this command is just initializing our database. 
+We will run this any time we add or edit a model. This command automatically executes a SQL migration that tells your database how to add/remove/edit the tables used to store your objects/relationships. This is pretty magical, you don't need to write any SQL - Django will automatically transform your python into a database :). We don't have any tables yet, so this command is just initializing our database. 
 
 In the future, when you edit the models.py file, execute the following to update your DB: 
 ```bash
