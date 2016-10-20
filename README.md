@@ -76,7 +76,7 @@ def index(request):
 When a request is routed to this method, it will respond with HTTP as shown above.
 
 In order to see the result, we need to route a url to call our view! To do this, go ahead and open **polls/urls.py** and include the following code:
-```
+```python
 from django.conf.urls import url
 from . import views
 
