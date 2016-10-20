@@ -23,7 +23,13 @@ and checkout the file 'requirements.txt', you'll see:
 Django==1.9.2
 virtualenv==1.11.4
 ```
-by executing: 
+Now let's install pip. Simply run
+```
+sudo python get-pip.py
+```
+Now you've installed pip!
+
+Then, execute: 
 ```
 pip install requirements.txt
 ```
