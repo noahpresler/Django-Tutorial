@@ -5,7 +5,7 @@ Adapted from: https://docs.djangoproject.com/en/1.10/intro/tutorial01/
 
 We are going to build a Poll for people to vote on the project to win Semester.ly's award! (Or anything else). 
 
-##Step 0: Clone the Repository
+##Step 0: Fork the Repository
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Once you have it, click the Fork button above to make your own version of this repo! 
 
@@ -96,12 +96,12 @@ Let's get started by executing the following command:
 ```bash
 $ python manage.py migrate
 ```
-We will run this any time we add or edit a model. This command automatically executes a SQL migration that tells your database how to add/remove/edit the tables used to store your objects/relationships. This is pretty magical, you don't need to write any SQL - Django will automatically transform your python into a database :). We don't have any tables yet, so this command is just initializing our database. 
+We will run this any time we add or edit a model. This command automatically executes any outstanding SQL migrations that tell your database how to add/remove/edit the tables used to store your objects/relationships. This is pretty magical, you don't need to write any SQL - Django will automatically transform your python into a database :). We don't have any tables yet, so this command is just initializing our database. 
 
 In the future, when you edit the models.py file, execute the following to update your DB: 
 ```bash
-$ python manage.py makemigrations
-$ python manage.py migrate
+$ python manage.py makemigrations #make the migration based on your changes
+$ python manage.py migrate #execute the migration editing the database
 ```
 
 ##Step 6: Models
