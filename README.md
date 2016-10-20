@@ -65,7 +65,7 @@ Django-Tutorial/
 This is because we've setup your app directory for you. In the future you can execute 'python manage.py startapp name_of_your_app' to do this. 
 
 Let's go ahead and write one of those views we talked about earlier. Open the file **djangoworkshop/views.py**
-```
+```python
 from django.http import HttpResponse
 
 def index(request):
