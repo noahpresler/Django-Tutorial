@@ -29,19 +29,23 @@ sudo python get-pip.py
 Now you've installed pip!
 ##Step 2: Enter your Virtual Environment and Install Requirements
 First, enter:
+```bash
+$ source venv/bin/activate
 ```
-source venv/bin/activate
+On windows: 
+```bash
+> venv/Scripts\activate
 ```
 Then, execute: 
-```
-pip install -r --user requirements.txt
+```bash
+$ pip install -r --user requirements.txt
 ```
 You will install Django version 1.9.2 and virtulenv 1.11.4
 
 ##Step 3: Boom, Workshop Done!
 Try this: 
-```
-python manage.py runserver
+```bash
+$ python manage.py runserver
 ```
 Now, head over to 'localhost:8000' [in your favorite browser (Chrome, of course)](https://gfycat.com/IllustriousPowerfulIlsamochadegu)
 Check it out! Your server is working.
@@ -117,8 +121,8 @@ One might say that **a question has many choices**. - to represent this relation
 ```python
 from django.db import models
 
-
 class Question(models.Model):
+    #a character field like a string 
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 
