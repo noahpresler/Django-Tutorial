@@ -1,1 +1,24 @@
 # Django-Tutorial
+
+##Step 0: Clone the Repository
+If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+Once you have it, clone this repo with the following command: 
+
+```
+$ git clone https://github.com/noahpresler/Django-Tutorial.git
+```
+
+##Step 1: Install Python/Pip and Requirements
+
+Django is a web framework that works with Python. If you don't already have python, install it here: https://www.python.org/downloads/
+
+Now, we are going to go ahead and install Django, and VirtualEnv. To do this, simply enter the repository:
+```
+cd \path\to\Django-Tutorial
+```
+and checkout the file 'requirements.txt', you'll see:
+```
+Django==1.9.2
+virtualenv==1.11.4
+```
+by executing: 
