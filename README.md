@@ -135,3 +135,11 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
  ```
+
+Swag. Now, pop quiz: what do we do after we edit models to have the change take place in the DB? 
+*Answer: makemigrations and migrate!*
+
+```bash
+$ python manage.py makemigrations #make the migration based on your changes
+$ python manage.py migrate #execute the migration editing the database
+```
