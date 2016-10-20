@@ -10,7 +10,7 @@ Once you have it, clone this repo with the following command:
 $ git clone https://github.com/noahpresler/Django-Tutorial.git
 ```
 
-##Step 1: Install Python/Pip and Requirements
+##Step 1: Install Python/Pip
 
 Django is a web framework that works with Python. If you don't already have python, install it here: https://www.python.org/downloads/
 
