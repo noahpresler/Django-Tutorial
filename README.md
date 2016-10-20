@@ -49,7 +49,7 @@ Check it out! Your server is working.
 
 Your app works - k bai! 
 
-##Step 4: Jk, jk - let's get to it 
+##Step 4: Jk, jk - let's get to it: Write your First View
 
 Now, you'll see in your directory the following: 
 ```
@@ -63,3 +63,11 @@ Django-Tutorial/
 └── venv
 ```
 This is because we've setup your app directory for you. In the future you can execute 'python manage.py startapp name_of_your_app' to do this. 
+
+Let's go ahead and write one of those views we talked about earlier. Open the file **djangoworkshop/views.py**
+```
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Look mom! I made a web app!")
+```
