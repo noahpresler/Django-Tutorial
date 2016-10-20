@@ -38,3 +38,5 @@ Now, head over to 'localhost:8000' [in your favorite browser (Chrome, of course)
 Check it out! Your server is working.
 
 Your app works - k bai! 
+
+##Step 3: Jk, jk - let's get to it 
