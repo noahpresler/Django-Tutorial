@@ -127,6 +127,9 @@ class Question(models.Model):
     # a date field to represent when it was published
     pub_date = models.DateTimeField('date published')
 
+    #pretty printing toString method
+    def __str__(self):
+       return self.question_text
 
 class Choice(models.Model):
     #This stores a foreign key (the identifier) of a question model to which this choice belongs
@@ -134,6 +137,10 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
+    
+    #pretty printing toString method
+    def __str__(self):
+        return self.choice_text
  ```
 
 Swag. Now, pop quiz: what do we do after we edit models to have the change take place in the DB? 
