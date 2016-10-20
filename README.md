@@ -3,6 +3,8 @@
 Follow along with the slides here: ________________
 Adapted from: https://docs.djangoproject.com/en/1.10/intro/tutorial01/
 
+We are going to build a Poll for people to vote on the project to win Semester.ly's award! (Or anything else). 
+
 ##Step 0: Clone the Repository
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Once you have it, clone this repo with the following command: 
@@ -106,4 +108,8 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-##Step 5: Models
+##Step 6: Models
+We are going to make two models: a question and a choice.
+**Question** defined by a publication date, and a question text
+**Choice** defined by the text of the choice, and the tally (count).
+One might say that **a question has many choices**. - to represent this relationship each Choice will point to a question to show what it belongs to. 
