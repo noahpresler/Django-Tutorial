@@ -110,6 +110,9 @@ $ python manage.py migrate
 
 ##Step 6: Models
 We are going to make two models: a question and a choice.
-**Question** defined by a publication date, and a question text
+
+**Question** defined by a publication date, and a question text.
+
 **Choice** defined by the text of the choice, and the tally (count).
+
 One might say that **a question has many choices**. - to represent this relationship each Choice will point to a question to show what it belongs to. 
