@@ -220,7 +220,7 @@ And add this right before the end of the body
 ### < div class="some_bootstrap_class" > </ div >
 Here is a quick cheat sheet with all the bootstrap css classes https://bootstrapcreative.com/resources/bootstrap-3-css-classes-index/.  You can find the official bootstrap documentation here: http://getbootstrap.com/css/#helper-classes
 
-Bootstrap uses a 12 column grid but can be 
+Bootstrap uses a 12 column grid.  `col-md-8` means this one column will take 8/12 columns width, while `col-md-1` will be the smallest column you can make.
 
 ```html
 <div class="row">
