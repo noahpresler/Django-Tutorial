@@ -210,11 +210,24 @@ Insert the following code into `polls/templates/index.html` where it says `<!-In
 Swoon the judges with a sexy frontend without learning CSS.  
 Bootstrap allows the user to add *classes* to html tags in place of writing CSS
 
-Add this inside inside <head></head>
+Add this inside inside the head tag
 `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">`
+
 And add this right before the end of the body
 `<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
 
+*Adding Classes*
+### < div class="some_bootstrap_class" > </ div >
+Here is a quick cheat sheet with all the bootstrap css classes https://bootstrapcreative.com/resources/bootstrap-3-css-classes-index/.  You can find the official bootstrap documentation here: http://getbootstrap.com/css/#helper-classes
+
+Bootstrap uses a 12 column grid but can be 
+
+```html
+<div class="row">
+  <div class="col-md-8">Stuff in here will take up 2/3 of width</div>
+  <div class="col-md-4">Stuff in here will take up 1/3 of width</div>
+</div>
+```
 
 ##Step 9: Out of the nest
 
