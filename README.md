@@ -209,8 +209,11 @@ Insert the following code into `polls/templates/index.html` where it says `<!-In
 
 Swoon the judges with a sexy frontend without learning CSS.  
 Bootstrap allows the user to add *classes* to html tags in place of writing CSS
-Add this inside the <head> tag
+
+Add this inside inside <head></head>
 `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">`
+And add this right before the end of the body
+`<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
 
 
 ##Step 9: Out of the nest
