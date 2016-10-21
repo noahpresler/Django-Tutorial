@@ -205,3 +205,8 @@ Then edit the template initially
 ```
 
 ##Step 8: Make it shmexy - Bootstrap
+
+##Step 9: Out of the nest
+
+Make your own. Ask qustions. Blah
+https://docs.djangoproject.com/en/1.10/intro/tutorial03/
