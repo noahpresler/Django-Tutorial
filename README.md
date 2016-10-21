@@ -173,3 +173,42 @@ enter a username/email and password.
 Now, when you run your server and head to [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) you should see a nice admin page! ![admin](https://docs.djangoproject.com/en/1.10/_images/admin01.png)
 
 After logging in you should be able to click the Polls app and play around with creating, editting, and deleting models!
+
+
+##Step 7: A simple frontend
+
+Max: tell them about how we are making a view
+
+HAve them edit **polls/views.py**
+```python
+from django.shortcuts import render
+from .models import Question
+
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index.html', context)
+```
+
+Then edit the template initially 
+
+```html
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+```
+
+##Step 8: Make it shmexy - Bootstrap
+
+##Step 9: Out of the nest
+
+Make your own. Ask qustions. Blah
+https://docs.djangoproject.com/en/1.10/intro/tutorial03/
+
+Recap what you learned and how to apply it 
