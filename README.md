@@ -172,19 +172,14 @@ enter a username/email and password.
 
 Now, when you run your server and head to [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) you should see a nice admin page! ![admin](https://docs.djangoproject.com/en/1.10/_images/admin01.png)
 
-After logging in you should be able to see a admin management screen - but nothing about Polls! 
-This is becaause we have not made our models accessible to the admin view. 
-
-Open up **polls/admin.py** and uncomment out the lines we have. These lines import and register our models with the admin.
-
-Head back to the browser and you should be able to click polls, then add/edit/remove questions and choices. This actually creates instances of your models and saves them to persist in the database.
+After logging in you should be able to click the Polls app and play around with creating, editting, and deleting models!
 
 
 ##Step 7: A simple frontend
 
 Lets bring data from our models into the views and throw it into a template!  Below we first grab data from the Question model and order it by publication date.  `context` is where we pass the data variables into template variables.  Finally we feed the `context` into a template and return the rendered template!
 
-Edit your index function in views.py to the following *polls/views.py**
+Edit your index function in views.py to the following *polls/views.py*
 ```python
 from django.shortcuts import render
 from .models import Question
@@ -195,8 +190,9 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-Then edit the template initially 
+We set up a simple template wrapper for you in `polls/templates`.  Templates are essentially HTML with some DJango syntax that tells Django where to insert the data you want to pass it.  Templates allow us to use conditionals and loops!  Pass variables by putting them in {{}}
 
+Insert the following code into `polls/templates/index.html` where it says `<!-Insert Code Here->`
 ```html
 {% if latest_question_list %}
     <ul>
@@ -210,6 +206,12 @@ Then edit the template initially
 ```
 
 ##Step 8: Make it shmexy - Bootstrap
+
+Swoon the judges with a sexy frontend without learning CSS.  
+Bootstrap allows the user to add *classes* to html tags in place of writing CSS
+Add this inside the <head> tag
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">`
+
 
 ##Step 9: Out of the nest
 
