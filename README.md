@@ -153,7 +153,7 @@ $ python manage.py makemigrations #make the migration based on your changes
 $ python manage.py migrate #execute the migration editing the database
 ```
 
-##Step 6: Creating Questions and Choices
+##Step 7: Creating Questions and Choices
 
 From python, you'll be able to create new objects with commands like: 
 
