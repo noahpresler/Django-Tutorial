@@ -77,7 +77,7 @@ def index(request):
 ```
 When a request is routed to this method, it will respond with HTTP as shown above.
 
-First, go ahead and uncomment out the line we have in **djangoworkshop/urls.py**. This will tell our webapp to include the urls we are about to specify. 
+First, go ahead and **uncomment out the line we have in djangoworkshop/urls.py**. This will tell our webapp to include the urls we are about to specify. 
 
 In order to see the result, we need to route a url to call our view! To do this, go ahead and open **polls/urls.py** and include the following code:
 ```python
