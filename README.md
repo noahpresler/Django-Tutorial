@@ -205,7 +205,7 @@ Insert the following code into `polls/templates/index.html` where it says `<!-In
 {% endif %}
 ```
 
-##Step 8: Make it shmexy - Bootstrap
+##Step 8: Make it Shmexy - Bootstrap
 
 Swoon the judges with a sexy frontend without learning CSS.  
 Bootstrap allows the user to add *classes* to html tags in place of writing CSS
@@ -231,7 +231,14 @@ Bootstrap uses a 12 column grid.  `col-md-8` means this one column will take 8/1
 
 ##Step 9: Out of the nest
 
-Make your own. Ask qustions. Blah
+Boom, you have views, models and a Bootstrap front end. Continue developing by following along here: 
 https://docs.djangoproject.com/en/1.10/intro/tutorial03/
 
-Recap what you learned and how to apply it 
+Learn more bootstrap:
+http://getbootstrap.com/getting-started/#examples
+
+With this framework you can extend your application to be dynamic and beautiful by building more complicated views, models and templates. This stack is also extremely flexible so you may customize as you wish! 
+
+We use React/Redux as our frontend rather than Bootstrap/Templates. We also use PostgeSQL instead of SQLite. 
+
+Choose your favorite stack and we're happy to help you get it off the ground :)
