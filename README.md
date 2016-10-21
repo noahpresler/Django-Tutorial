@@ -172,7 +172,12 @@ enter a username/email and password.
 
 Now, when you run your server and head to [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) you should see a nice admin page! ![admin](https://docs.djangoproject.com/en/1.10/_images/admin01.png)
 
-After logging in you should be able to click the Polls app and play around with creating, editting, and deleting models!
+After logging in you should be able to see a admin management screen - but nothing about Polls! 
+This is becaause we have not made our models accessible to the admin view. 
+
+Open up **polls/admin.py** and uncomment out the lines we have. These lines import and register our models with the admin.
+
+Head back to the browser and you should be able to click polls, then add/edit/remove questions and choices. This actually creates instances of your models and saves them to persist in the database.
 
 
 ##Step 7: A simple frontend
@@ -190,9 +195,8 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-We set up a simple template wrapper for you in `polls/templates`.  Templates are essentially HTML with some DJango syntax that tells Django where to insert the data you want to pass it.  Templates allow us to use conditionals and loops!  Pass variables by putting them in {{}}
+Then edit the template initially 
 
-Insert the following code into `polls/templates/index.html` where it says `<!-Insert Code Here->`
 ```html
 {% if latest_question_list %}
     <ul>
