@@ -150,3 +150,23 @@ Swag. Now, pop quiz: what do we do after we edit models to have the change take 
 $ python manage.py makemigrations #make the migration based on your changes
 $ python manage.py migrate #execute the migration editing the database
 ```
+
+##Step 6: Creating Questions and Choices
+
+From python, you'll be able to create new objects with commands like: 
+
+```python
+q = Question(question_text="What's new?", pub_date=timezone.now())
+q.save()
+```
+
+For now, however, we are going to set up an admin dashboard for you to do this graphically. 
+
+First, create a super user:
+```bash
+$ python manage.py createsuperuser
+```
+enter a username/email and password.
+
+Now, when you run your server and head to [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) you should see a nice admin page! [admin](https://docs.djangoproject.com/en/1.10/_images/admin01.png)
+
