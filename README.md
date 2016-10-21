@@ -190,8 +190,9 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-Then edit the template initially 
+We set up a simple template wrapper for you in `polls/templates`.  Templates are essentially HTML with some DJango syntax that tells Django where to insert the data you want to pass it.  Templates allow us to use conditionals and loops!  Pass variables by putting them in {{}}
 
+Insert the following code into `polls/templates/index.html` where it says `<!-Insert Code Here->`
 ```html
 {% if latest_question_list %}
     <ul>
