@@ -77,7 +77,7 @@ def index(request):
 ```
 When a request is routed to this method, it will respond with HTTP as shown above.
 
-First, go ahead and **uncomment out the line we have in djangoworkshop/urls.py**. This will tell our webapp to include the urls we are about to specify. 
+First, go ahead and uncomment out the line we have in **djangoworkshop/urls.py**. This will tell our webapp to include the urls we are about to specify. 
 
 In order to see the result, we need to route a url to call our view! To do this, go ahead and open **polls/urls.py** and include the following code:
 ```python
@@ -177,9 +177,9 @@ After logging in you should be able to click the Polls app and play around with 
 
 ##Step 7: A simple frontend
 
-Max: tell them about how we are making a view
+Lets bring data from our models into the views and throw it into a template!  Below we first grab data from the Question model and order it by publication date.  `context` is where we pass the data variables into template variables.  Finally we feed the `context` into a template and return the rendered template!
 
-HAve them edit **polls/views.py**
+Edit your index function in views.py to the following *polls/views.py**
 ```python
 from django.shortcuts import render
 from .models import Question
