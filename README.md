@@ -48,7 +48,7 @@ Try this:
 $ python manage.py runserver
 ```
 Now, head over to 'localhost:8000' [in your favorite browser (Chrome, of course)](https://gfycat.com/IllustriousPowerfulIlsamochadegu)
-Check it out! Your server is working.
+Check it out! Your server is working. (Ignore the migration error). 
 
 ####Your app works - k bai! 
 
