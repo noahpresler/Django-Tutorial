@@ -210,3 +210,5 @@ Then edit the template initially
 
 Make your own. Ask qustions. Blah
 https://docs.djangoproject.com/en/1.10/intro/tutorial03/
+
+Recap what you learned and how to apply it 
