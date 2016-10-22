@@ -39,7 +39,7 @@ On windows:
 ```
 Then, execute: 
 ```bash
-$ pip install -r --user requirements.txt
+$ pip install -r requirements.txt --user
 ```
 You will install Django version 1.9.2 and virtulenv 1.11.4
 
