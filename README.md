@@ -10,6 +10,11 @@ We are going to build a Poll for people to vote on the project to win Semester.l
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Once you have it, click the Fork button above to make your own version of this repo! 
 
+More simply, clone with the following commands: 
+```bash
+git clone https://github.com/noahpresler/Django-Tutorial.git
+```
+
 ##Step 1: Install Python/Pip
 
 Django is a web framework that works with Python. If you don't already have python, install it here: https://www.python.org/downloads/
