@@ -190,6 +190,7 @@ Lets bring data from our models into the views and throw it into a template!  Be
 Edit your index function in views.py to the following *polls/views.py*
 ```python
 from django.shortcuts import render
+from django.template import loader
 from .models import Question
 
 def index(request):
