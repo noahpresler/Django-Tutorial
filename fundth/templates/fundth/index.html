@@ -117,7 +117,7 @@
                     <p class="lead">Organizations want better ways to raise money. Businesses want ways to increase revenue. Charities need the resources to make our world a better place. We make it easier to do all three.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class= "{% static "img-responsive" %}" src="img/ipad.png" alt="">
+                    <img src = "{% static "img/ipad.png" %}" alt="">
                 </div>
             </div>
 
@@ -139,7 +139,7 @@
                     <p class="lead">Organizations fill out one form to multiple businesses. Businesses are notified of new opportunities. Less time searching and cold calling, more time doing.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class= "{% static "img-responsive" %}" src="img/dog.png" alt="">
+                <img src = "{% static "img/dog.png" %}" alt="">
                 </div>
             </div>
 
@@ -161,7 +161,10 @@
                     <p class="lead">Any organization will find us useful. Any business can offer sponsorships, products, or space. Organizations can rate the quality of the business. </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class= "{% static "img-responsive" %}" src="img/phones.png" alt="">
+
+                	<img src = "{% static "img/smallLogo.png" %}" height = 30 width = 90>
+
+                    <img class= "{% static "img/phones.png" alt="">
                 </div>
             </div>
 
@@ -229,11 +232,10 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <!-- <script src="js/jquery.js"></script> -->
+  <script src="{{STATIC_URL}} ../static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="{{STATIC_URL}} ../static/js/bootstrap.min.js"></script>
 
 </body>
 
