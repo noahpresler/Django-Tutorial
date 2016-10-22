@@ -1,0 +1,170 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Create Account - Community Connect</title>
+
+   <!-- Bootstrap Core CSS -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/landing-page.css'%}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <!-- <link href="{% static 'https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' %}" rel="stylesheet" type="text/css"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    
+    <script>
+var city;
+function initialize() {
+	$.get("http://ipinfo.io", function(response) {
+    	console.log(response.city, response.country);
+    	city = response.city;
+    	document.getElementById("city").value = city;
+	}, "jsonp");
+}
+function getData() {
+document.getElementById("results").innerHTML="Loading...";
+jQuery.ajax({
+            url: "http://api.reimaginebanking.com/enterprise/merchants?key=1252b146fef896dd827f3fa7d59a4f31",
+            type: "GET",
+
+            contentType: 'application/json; charset=utf-8',
+            success: function(resultData) {
+                //here is your json.
+                  // process it
+                  document.getElementById("results").innerHTML="";
+                  console.log(resultData);
+				//var json = { items: ['item 1', 'item 2', 'item 3'] };
+				console.log(resultData.results);
+				$(resultData.results).each(function(index, item) {
+					//var obj = jQuery.parseJSON(item.address);
+					console.log(item);
+					if(item.address.city==city && item.name.includes(document.getElementById("name").value)) {
+						//ul.append(
+        					//$(document.getElementById("results").appendChild("hi");
+        					//document.createElement('li').text(item.name))
+    					//);
+    					var myDiv = document.getElementById("results");
+    					var aTag = document.createElement("a");
+    					aTag.setAttribute('href', "yourlink.html");
+    					aTag.innerHTML = "<li class = 'list-unstyled'>"+item.name+"</li>";
+    					//element.appendChild(document.createTextNode(item.name));
+
+    					myDiv.appendChild(aTag);
+					}
+    				
+			});
+
+            },
+            error : function(jqXHR, textStatus, errorThrown) {
+            },
+
+            timeout: 120000,
+        });
+}
+
+</script>
+
+    
+
+</head>
+
+<body onload="initialize()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html"><img src = "{% static "img/smallLogo.png" %}" height = 30 width = 90></img></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+			<br><br><br><br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--div class="intro-message"-->
+                        <h3>Search for your business!</h3>
+        				<h5>Powered by Capital One Nessie</h5>
+                        <hr class="intro-divider">
+                       <form>
+                       Type in a city<br>
+						<input type="text" id="city" size =20 style="background-color:white;
+              														font-size:14px; 
+              														vertical-align:9px;color:black">
+              			</input><br>
+              			Business Name: <br>
+						<input type="text" id="name" size =20 style="background-color:white;
+              														font-size:14px; 
+              														vertical-align:9px;color:black">
+              			</input> <br>
+						<input type="button" id="search" onclick="getData()">Submit</input>
+						<ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="unknownBusiness.html" class="btn btn-default btn-lg">Can't find your business? Click here</a>
+                            </li>
+                    	</ul>
+                    	<center>
+						<div style="width:400px;height:200px;line-height:3em;overflow:auto;padding:5px;" id = "results">
+						</div>
+						</center>
+                    <!--/div-->
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    </body>
+        <script src="{{STATIC_URL}} ../static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{STATIC_URL}} ../static/js/bootstrap.min.js"></script>
+    </html>
