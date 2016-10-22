@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +12,15 @@
 
     <title>Home - Community Connect</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
 
     <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="{% static 'css/landing-page.css'%}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static 'font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <!-- <link href="{% static 'https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' %}" rel="stylesheet" type="text/css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="index.html"><img src = "smallLogo.png" height = 30 width = 90></img></a>
+                <a class="navbar-brand topnav" href="index.html"><img src = "{% static "img/smallLogo.png" %}" height = 30 width = 90></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -73,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-12">
                 	<br><br>
-                	<img src ="logo2.png" height = 300 width = 300></img>
+                	<img src = "{% static "img/logo2.png" %}" height = 300 width = 300></img>
                     <!--div class="intro-message"-->
                         <h1>Fundraising made easier.</h1>
                         <h3>Connecting organizations with local businesses for the greater good.</h3>
@@ -116,7 +117,7 @@
                     <p class="lead">Organizations want better ways to raise money. Businesses want ways to increase revenue. Charities need the resources to make our world a better place. We make it easier to do all three.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                    <img class= "{% static "img-responsive" %}" src="img/ipad.png" alt="">
                 </div>
             </div>
 
@@ -138,7 +139,7 @@
                     <p class="lead">Organizations fill out one form to multiple businesses. Businesses are notified of new opportunities. Less time searching and cold calling, more time doing.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class= "{% static "img-responsive" %}" src="img/dog.png" alt="">
                 </div>
             </div>
 
@@ -160,7 +161,7 @@
                     <p class="lead">Any organization will find us useful. Any business can offer sponsorships, products, or space. Organizations can rate the quality of the business. </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
+                    <img class= "{% static "img-responsive" %}" src="img/phones.png" alt="">
                 </div>
             </div>
 
@@ -229,10 +230,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
 
 </body>
 

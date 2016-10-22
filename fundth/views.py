@@ -7,4 +7,4 @@ from django.views.generic import TemplateView
 
 def index(request):
 	context = {'jason_is_dumb': True}
-	return render(request, 'fundth/businessLogin.html', context)
+	return render(request, 'fundth/index.html', context)
