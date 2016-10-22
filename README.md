@@ -1,6 +1,7 @@
 # Django-Tutorial
 
-Follow along with the slides here: ________________
+Follow along with the slides here: https://docs.google.com/presentation/d/1fvojKdQUyRgDIOh96k5Ml9WmcKcl19B9HhirzVG2p10/edit?usp=sharing
+
 Adapted from: https://docs.djangoproject.com/en/1.10/intro/tutorial01/
 
 We are going to build a Poll for people to vote on the project to win Semester.ly's award! (Or anything else). 
