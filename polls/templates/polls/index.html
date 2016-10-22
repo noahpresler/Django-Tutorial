@@ -10,15 +10,24 @@
 		<title>Polls</title>
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.png' %}" />
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
 		<link rel="stylesheet" href="{% static 'css/style.css'%}">
 
 	</head>
 	<body>
 		
 		<!--Insert Code Here-->
+		<h1>Hey</h1>
+		{% if latest_question_list %}
+		    <ul>
+		    {% for question in latest_question_list %}
+		        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+		    {% endfor %}
+		    </ul>
+		{% else %}
+		    <p>No polls are available.</p>
+		{% endif %}
 
       	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>
