@@ -1,6 +1,7 @@
 # Django-Tutorial
 
-Follow along with the slides here: ________________
+Follow along with the slides here: https://docs.google.com/presentation/d/1fvojKdQUyRgDIOh96k5Ml9WmcKcl19B9HhirzVG2p10/edit?usp=sharing
+
 Adapted from: https://docs.djangoproject.com/en/1.10/intro/tutorial01/
 
 We are going to build a Poll for people to vote on the project to win Semester.ly's award! (Or anything else). 
@@ -8,6 +9,11 @@ We are going to build a Poll for people to vote on the project to win Semester.l
 ##Step 0: Fork the Repository
 If you don't have git, install it here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Once you have it, click the Fork button above to make your own version of this repo! 
+
+More simply, clone with the following commands: 
+```bash
+git clone https://github.com/noahpresler/Django-Tutorial.git
+```
 
 ##Step 1: Install Python/Pip
 
@@ -38,7 +44,7 @@ On windows:
 ```
 Then, execute: 
 ```bash
-$ pip install -r --user requirements.txt
+$ pip install -r requirements.txt --user
 ```
 You will install Django version 1.9.2 and virtulenv 1.11.4
 
@@ -48,7 +54,7 @@ Try this:
 $ python manage.py runserver
 ```
 Now, head over to 'localhost:8000' [in your favorite browser (Chrome, of course)](https://gfycat.com/IllustriousPowerfulIlsamochadegu)
-Check it out! Your server is working.
+Check it out! Your server is working. (Ignore the migration error). 
 
 ####Your app works - k bai! 
 
@@ -177,9 +183,9 @@ After logging in you should be able to click the Polls app and play around with 
 
 ##Step 7: A simple frontend
 
-Max: tell them about how we are making a view
+Lets bring data from our models into the views and throw it into a template!  Below we first grab data from the Question model and order it by publication date.  `context` is where we pass the data variables into template variables.  Finally we feed the `context` into a template and return the rendered template!
 
-HAve them edit **polls/views.py**
+Edit your index function in views.py to the following *polls/views.py*
 ```python
 from django.shortcuts import render
 from .models import Question
@@ -190,8 +196,9 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-Then edit the template initially 
+We set up a simple template wrapper for you in `polls/templates`.  Templates are essentially HTML with some DJango syntax that tells Django where to insert the data you want to pass it.  Templates allow us to use conditionals and loops!  Pass variables by putting them in {{}}
 
+Insert the following code into `polls/templates/index.html` where it says `<!-Insert Code Here->`
 ```html
 {% if latest_question_list %}
     <ul>
@@ -204,11 +211,40 @@ Then edit the template initially
 {% endif %}
 ```
 
-##Step 8: Make it shmexy - Bootstrap
+##Step 8: Make it Shmexy - Bootstrap
+
+Swoon the judges with a sexy frontend without learning CSS.  
+Bootstrap allows the user to add *classes* to html tags in place of writing CSS
+
+Add this inside inside the head tag
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">`
+
+And add this right before the end of the body
+`<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
+
+*Adding Classes*
+### < div class="some_bootstrap_class" > </ div >
+Here is a quick cheat sheet with all the bootstrap css classes https://bootstrapcreative.com/resources/bootstrap-3-css-classes-index/.  You can find the official bootstrap documentation here: http://getbootstrap.com/css/#helper-classes
+
+Bootstrap uses a 12 column grid.  `col-md-8` means this one column will take 8/12 columns width, while `col-md-1` will be the smallest column you can make.
+
+```html
+<div class="row">
+  <div class="col-md-8">Stuff in here will take up 2/3 of width</div>
+  <div class="col-md-4">Stuff in here will take up 1/3 of width</div>
+</div>
+```
 
 ##Step 9: Out of the nest
 
-Make your own. Ask qustions. Blah
+Boom, you have views, models and a Bootstrap front end. Continue developing by following along here: 
 https://docs.djangoproject.com/en/1.10/intro/tutorial03/
 
-Recap what you learned and how to apply it 
+Learn more bootstrap:
+http://getbootstrap.com/getting-started/#examples
+
+With this framework you can extend your application to be dynamic and beautiful by building more complicated views, models and templates. This stack is also extremely flexible so you may customize as you wish! 
+
+We use React/Redux as our frontend rather than Bootstrap/Templates. We also use PostgeSQL instead of SQLite. 
+
+Choose your favorite stack and we're happy to help you get it off the ground :)
