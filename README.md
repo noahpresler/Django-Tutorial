@@ -21,7 +21,7 @@ Django is a web framework that works with Python. If you don't already have pyth
 
 Now, we are going to go ahead and install Django, and VirtualEnv. To do this, simply enter the repository:
 ```
-cd \path\to\Django-Tutorial
+cd Django-Tutorial
 ```
 and checkout the file 'requirements.txt', you'll see:
 ```
